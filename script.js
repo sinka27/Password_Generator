@@ -50,6 +50,17 @@ function genPassword() {
     } else {
       console.log("Special Characters not selected.");
     }
+
+    //confirming uppercase letters to be included?
+    var uppercase = confirm(
+      "Do you want to include uppercase letters in your password?"
+    );
+    if (uppercase === true) {
+      chars = chars + charUpper;
+      console.log(chars);
+    } else {
+      console.log("Uppercase letters not selected.");
+    }
 }
 
 // Add event listener to generate button
