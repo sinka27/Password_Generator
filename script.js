@@ -61,6 +61,17 @@ function genPassword() {
     } else {
       console.log("Uppercase letters not selected.");
     }
+
+    //confirming lowercase letters to be included?
+    var lowercase = confirm(
+      "Do you want to include lowercase letters in your password?"
+    );
+    if (lowercase === true) {
+      chars = chars + charSmall;
+      console.log(chars);
+    } else {
+      console.log("Lowercase letters not selected.");
+    }
 }
 
 // Add event listener to generate button
