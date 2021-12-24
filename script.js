@@ -20,8 +20,6 @@ function genPassword() {
         "What should be the length of your password? Enter a number between 8-128"
       );
     } while (passwordLength < 8 || passwordLength > 128);
-  
-  } while (chars === "");
 
     //declared variables for storing different character types
     var charSpecial = "!@#$%^&*()";
@@ -72,6 +70,11 @@ function genPassword() {
     } else {
       console.log("Lowercase letters not selected.");
     }
+    //creating alert if none of the character type is selected
+    if (chars === "") {
+      alert("Invalid! Please select valid character types.");
+    }
+  } while (chars === "");
 }
 
 // Add event listener to generate button
