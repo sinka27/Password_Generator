@@ -1,12 +1,15 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var password = document.getElementById("password");
 
-// Write password to the #password input
+// Write password to the #password textarea
 function writePassword() {
-  var password = generatePassword();
+  var password = genPassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
+}
+//generateBtn.addEventListener("click", writePassword);
+
 //Generate Password according to choosen inputs
 function genPassword() {
   var passwordLength;
@@ -70,12 +73,26 @@ function genPassword() {
     } else {
       console.log("Lowercase letters not selected.");
     }
+
     //creating alert if none of the character type is selected
     if (chars === "") {
       alert("Invalid! Please select valid character types.");
     }
   } while (chars === "");
+
+  //Store generated password from chosen random characters
+  var password = "";
+
+  //run for loop as many times as user selected for password length
+  for (var i = 0; i < passwordLength; i++) {
+    //Generated a random index between 0 and length of string containing all the selected characters-1
+    var randomNumber = Math.floor(Math.random() * chars.length);
+    //Add the character at the generated index to password string
+    password = password + chars.substring(randomNumber, randomNumber + 1);
+  }
+
+  return password;
 }
 
-// Add event listener to generate button
+//Call writePassword function when the Generate Password button is clicked
 generateBtn.addEventListener("click", writePassword);
