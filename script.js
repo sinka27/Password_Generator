@@ -23,6 +23,22 @@ function genPassword() {
   
   } while (chars === "");
 
+    //declared variables for storing different character types
+    var charSpecial = "!@#$%^&*()";
+    var charNumber = "0123456789";
+    var charUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var charSmall = "abcdefghijklmnopqrstuvwxyz";
+
+    //Prompts for character types
+
+    //confirming numbers to be included?
+    var number = confirm("Do you want to include numbers in your password?");
+    if (number === true) {
+      chars = chars + charNumber;
+      console.log(chars);
+    } else {
+      console.log("Numbers not selected.");
+    }
 }
 
 // Add event listener to generate button
