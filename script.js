@@ -39,6 +39,17 @@ function genPassword() {
     } else {
       console.log("Numbers not selected.");
     }
+
+    //confirming special characters to be included?
+    var specialCharacter = confirm(
+      "Do you want to include special characters in your password?"
+    );
+    if (specialCharacter === true) {
+      chars = chars + charSpecial;
+      console.log(chars);
+    } else {
+      console.log("Special Characters not selected.");
+    }
 }
 
 // Add event listener to generate button
