@@ -26,8 +26,8 @@ This random password generator prompts the user for the following criteria:
 6. Git
 
 ## Links
-* Github source code: 
-* Github deployed page:
+* Github source code: https://github.com/sinka27/Password_Generator
+* Github deployed page: https://sinka27.github.io/Password_Generator/
 
 ## Screenshots
 * Asking user for the length of the password
